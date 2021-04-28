@@ -1,4 +1,4 @@
-# 中国蚁剑 [![release](https://img.shields.io/badge/release-v2.1.9-blue.svg?style=flat-square)][url-release]
+# 中国蚁剑 [![release](https://img.shields.io/badge/release-v2.1.11.1-blue.svg?style=flat-square)][url-release]
 
 > 一剑在手，纵横无忧！
 
@@ -44,6 +44,14 @@
 
 **一路走来，得到了很多朋友的参与开发以及点滴赞助，在此感谢陪伴，感谢你们能让它越走越远！**
 
+## 其它
+
+### 星链计划2.0
+
+![](https://github.com/knownsec/404StarLink-Project/raw/master/logo.png)
+
+antSword 已经加入 404Team [404StarLink 2.0 - Galaxy](https://github.com/knownsec/404StarLink2.0-Galaxy)
+
 ## 开源协议
 
 详情请查看 [LICENSE](./LICENSE)
@@ -51,7 +59,7 @@
 
 [url-docen]: README.md
 [url-changelog]: CHANGELOG.md
-[url-document]: http://doc.u0u.us/zh-hans/
+[url-document]: https://www.yuque.com/antswordproject/antsword/
 [url-release]: https://github.com/AntSwordProject/AntSword/releases/
 [url-electron]: http://electron.atom.io/
 [url-es6]: http://es6.ruanyifeng.com/
@@ -59,10 +67,10 @@
 [url-nodejs]: https://nodejs.org/
 [url-homepage]: http://uyu.us
 [url-release]: https://github.com/AntSwordProject/AntSword/releases
-[url-quickstart]: https://doc.u0u.us/zh-hans/getting_started/index.html
+[url-quickstart]: https://www.yuque.com/antswordproject/antsword/lmwppk
 [url-contribute]: https://doc.u0u.us/zh-hans/contribute_docs.html
-[url-mainui]: http://as.xuanbo.cc/doc/getting_started/get_antsword_2.jpg
-[url-filemanager]: http://as.xuanbo.cc/doc/file_manager/main_page_1.png
-[url-terminal]: http://as.xuanbo.cc/doc/terminal/main_page_1.png
-[url-database]: http://as.xuanbo.cc/doc/database/main_page_1.png
-[url-pluginstore]: http://as.xuanbo.cc/doc/plugin_store/main_page_2.jpg
+[url-mainui]: https://cdn.nlark.com/yuque/0/2021/png/1592179/1611820109032-b563426e-015c-4afe-a905-70e878fdcdb6.png
+[url-filemanager]: https://cdn.nlark.com/yuque/0/2021/png/1592179/1611823243564-26e964c2-6d38-421a-8543-5f1f082a6bbd.png
+[url-terminal]: https://cdn.nlark.com/yuque/0/2021/png/1592179/1611823538382-50fba630-3bd9-4205-b5dd-9cc054da79a8.png
+[url-database]: https://cdn.nlark.com/yuque/0/2021/png/1592179/1611825612518-ca1c4fcc-98a6-4fa3-b55d-f25619c86380.png
+[url-pluginstore]: https://cdn.nlark.com/yuque/0/2021/png/1592179/1611907520850-040bffb1-5bc3-4c1c-a8d1-1e69712f7684.png

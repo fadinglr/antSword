@@ -113,7 +113,7 @@ class Menubar {
         accelerator: 'Command+Q',
         click: this
           .app
-          .quit
+          .exit
           .bind(this.app)
       }]
     }, {
@@ -283,7 +283,7 @@ class Menubar {
       label: LANG['tray']['quit'],
       click: this
         .app
-        .quit
+        .exit
         .bind(this.app)
     }];
 

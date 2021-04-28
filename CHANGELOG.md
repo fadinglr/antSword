@@ -2,6 +2,113 @@
 > 有空会补补BUG、添添新功能。    
 > 同时也欢迎大家的参与！感谢各位朋友的支持！ .TAT.
 
+## 2021/03/27 `v(2.1.11.1)`
+
+### 核心
+
+* 修复 PHP 类型数据库连接在PHP7下函数废除引起的问题
+
+## 2021/03/26 `v(2.1.11)`
+
+### 后端模块
+
+* 修改发包默认 UserAgent 为 随机 User-Agent
+* 修复 Chunk 发包下 Download 异常问题 #272 (thx @c2xusnpq6)
+* 修复 Download 在 chunk 和 multipart 发包模式下 asunescape 不生效的问题
+
+### 核心
+
+* JSP 类型支持「解码器」
+* 「解码器」 asoutput 新增传入参数 ext, 结构如下:
+
+```
+{
+  opts: opts: 类型为 Object, Shell 配置
+}
+```
+* 修复使用 default 编码器服务端其它函数输出 payload 时数据分割解析的问题
+
+eg: 
+
+```php
+<?php phpinfo();eval($_POST['ant']);phpinfo();?>
+```
+
+因为 `phpinfo();` 会显示发送的 payload, 发送的 payload 中含有数据分割符，导致分割出错
+
+*  移除 random 编码器
+
+> 能够适配所有编码器的Shell比较少, 这个功能就略显鸡肋, 我们决定移除它
+
+* JSP Template 升级至 [v1.5](https://github.com/AntSwordProject/AntSword-JSP-Template/releases/tag/1.5)
+  * 支持解码器(返回包加密)
+  * 兼容 JDK5
+  * 修复base64编码问题&改正错别字
+  * 修改获取当前目录的方式
+
+### 其它
+
+* 优化窗口关闭逻辑 #245
+
+ * 点击最小化时，不再最小化至系统托盘。点击窗口的关闭按钮，最小化至系统托盘。
+ * 点击托盘菜单中的「退出」程序退出。
+ * 点击菜单中的「退出程序」程序退出。
+
+* 「编码管理」新增新建「JSP解码器」
+
+## 2021/02/06 `v(2.1.10)`
+
+### 核心
+
+* 升级 JSP Template 到 v1.4
+  * 兼容 JDK6
+  * 兼容 Weblogic 内存 Webshell
+  * 优化报错信息
+  * 解决windows下中文乱码的问题（win选择GBK编码，linux选择UTF-8编码）
+  * 实战中只能获取到response的情况几乎没有，所以为了减少payload体积不再支持response作为入口参数
+  * 增加用于测试 payload 的Web项目
+  * 修复 java -jar xxx.war 启动时当前目录获取失败的问题
+
+### 数据管理
+
+* 修复 context menu category self-xss (thx @lixuesv)
+
+### 其它
+
+* 优化插件加载, 加载异常的插件不会再影响到其它插件加载了
+* 更新纯真IP库(2021/02/02)
+* 文档地址更换到语雀 https://www.yuque.com/antswordproject/antsword/
+* 加入 404Team [404StarLink 2.0 - Galaxy](https://github.com/knownsec/404StarLink2.0-Galaxy)
+
+ > 非常有幸能够加入星链计划, 大家有空可以了解一下星链计划，有许多很酷的安全项目, 你一定不想错过
+
+### 插件相关
+
+* [As-Exploits](https://github.com/AntSword-Store/GenShell) 升级到 v1.1
+
+  * 增加对aspx类型的支持
+  * 增加提权辅助模块（aspx/jsp/php）
+  * 增加屏幕截图模块（jsp）
+  * 增加shellcode加载器模块（aspx）
+  * 仅展示当前类型可用模块，不可用模块不再显示
+
+* [GenShell](https://github.com/AntSword-Store/GenShell) 升级到 v0.2
+
+ > 新增 asp、aspx、jsp 三种 Shell 类型生成
+
+* [AS_Redis](https://github.com/AntSword-Store/AS_Redis) 升级到 v0.4
+
+  > 支持 jsp 类型
+
+* [PortScan](https://github.com/AntSword-Store/PortScan) 升级到 v0.3
+
+ > 支持 jsp、php4 类型
+
+* [as_netstat](https://github.com/AntSword-Store/as_netstat) 升级到 v0.2
+
+  > 支持所有类型
+
+
 ## 2020/09/10 `v(2.1.9)`
 
 ### 核心
